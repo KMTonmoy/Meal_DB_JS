@@ -1,17 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meal_DB</title>
+    <title>Meal BD</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <header>
+        <nav class="flex justify-between items-center px-5 py-6 bg-pink-200">
+            <h1 class="text-3xl font-semibold text-secondary">MealBD</h1>
+
+            <div class="flex gap-5">
+                <button class="btn rounded-xl btn-outline btn-secondary">Log In</button>
+                <button class="btn rounded-xl btn-secondary">Sing Up</button>
+                <button class="text-4xl">🧺</button>
+            </div>
+        </nav>
+        <div class="banner  ">
+            <div class="banText flex justify-center">
+                <h1 class="text-7xl font-medium capitalize text-pink-700">It's the food you <br> love delivered</h1>
+            </div>
+            <div class="w-full text-center mt-20">
+                <input class="w-1/2 h-14  -mr-8 border-2 border-gray-500 text-yellow-950 rounded-xl pl-5"
+                    placeholder="Search Your Favorite Food" type="text" id="searchBox">
+                <button class="btn h-14 w-36 btn-secondary" onclick="searchMission()">Search</button>
+            </div>
+        </div>
+    </header>
+
+
+    <main class="cursor-pointer mb-11">
+        <h1 class="text-center text-5xl text-pink-600 font-semibold overline cursor-pointer">Choose Your Favorite Food.
+            🫡 </h1>
+        <section class="flex justify-center mt-4">
+            <div id="displayContainer" class="gap-6">
+
+            </div>
+        </section>
+
+        <div id="showBtn"  class="flex hidden my-14 justify-center">
+            <button  class="btn btn-outline btn-secondary" onclick="showAll()">Show All</button>
+
+        </div>
+    </main>
 
 
     <script src="scripts/script.js"></script>
 </body>
+
 </html>
